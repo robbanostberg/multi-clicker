@@ -1,6 +1,9 @@
 import time
 from pynput.keyboard import Key, Controller
+from pynput.mouse import Controller, Button
 from pywinauto import Desktop
+
+wait = 1
 
 def pressKey(controller, key):
     controller.press(key)
@@ -17,3 +20,4 @@ def releaseKey(controller, key):
 windows = Desktop(backend="uia").windows()  # creates a list of windows (and 4 other things)
 for w in windows:
     print(w.window_text())
+time.sleep(120)
