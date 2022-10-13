@@ -13,7 +13,7 @@ m = mouse.Controller()
 
 def pressKey(controller, key):
     controller.press(key)
-    time.sleep(wait)
+    time.sleep(wait/20)
 
 def tapKey(controller, key):
     controller.tap(key)
@@ -21,7 +21,7 @@ def tapKey(controller, key):
 
 def releaseKey(controller, key):
     controller.release(key)
-    time.sleep(wait)
+    time.sleep(wait/20)
 
 def clickButton(controller, button):
     controller.click(button)
@@ -40,7 +40,10 @@ windows[target].activate
 time.sleep(120)
 
 # Minecraft 1.19.2 - Multiplayer (LAN)'''
-time.sleep(delay)
+pressKey(t, Key.alt)
+tapKey(t, Key.tab)
+tapKey(t, Key.tab)
+releaseKey(t, Key.alt)
 for i in range(int(duration/wait)):
     clickButton(m, mouse.Button.left)
 tapKey(t, Key.enter)
