@@ -19,5 +19,7 @@ def releaseKey(controller, key):
 
 windows = Desktop(backend="uia").windows()  # creates a list of windows (and 4 other things)
 for w in windows:
-    print(w.window_text())
+    print(w)
 time.sleep(120)
+
+# Minecraft 1.19.2 - Multiplayer (LAN)
